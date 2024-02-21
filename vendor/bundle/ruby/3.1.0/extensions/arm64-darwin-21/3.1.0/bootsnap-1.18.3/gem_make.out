@@ -1,0 +1,20 @@
+current directory: /Users/dai_tachimoto/workspace/g-map/rails-gmap/vendor/bundle/ruby/3.1.0/gems/bootsnap-1.18.3/ext/bootsnap
+/Users/dai_tachimoto/.rbenv/versions/3.1.2/bin/ruby -I /Users/dai_tachimoto/.rbenv/versions/3.1.2/lib/ruby/3.1.0 -r ./siteconf20240220-45175-b3wwg7.rb extconf.rb
+checking for fdatasync() in unistd.h... yes
+checking for whether -D_GNU_SOURCE is accepted as CPPFLAGS... yes
+checking for whether -O3 is accepted as CFLAGS... yes
+checking for whether -std=c99 is accepted as CFLAGS... yes
+creating Makefile
+
+current directory: /Users/dai_tachimoto/workspace/g-map/rails-gmap/vendor/bundle/ruby/3.1.0/gems/bootsnap-1.18.3/ext/bootsnap
+make DESTDIR\= clean
+
+current directory: /Users/dai_tachimoto/workspace/g-map/rails-gmap/vendor/bundle/ruby/3.1.0/gems/bootsnap-1.18.3/ext/bootsnap
+make DESTDIR\=
+compiling bootsnap.c
+linking shared-object bootsnap/bootsnap.bundle
+ld: warning: -undefined dynamic_lookup may not work with chained fixups
+
+current directory: /Users/dai_tachimoto/workspace/g-map/rails-gmap/vendor/bundle/ruby/3.1.0/gems/bootsnap-1.18.3/ext/bootsnap
+make DESTDIR\= install
+/usr/bin/install -c -m 0755 bootsnap.bundle ./.gem.20240220-45175-7gzzgq/bootsnap
