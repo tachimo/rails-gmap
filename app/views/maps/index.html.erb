@@ -3,6 +3,8 @@
 <input id="address" type="textbox" value="GeekSalon">
 <input type="button" value="Encode" onClick="codeAddress()">
 
+<div id="display">何かが表示される。。。</div>
+
 <div id="map"></div>
 
 <style>
@@ -14,6 +16,9 @@
 
 <script>
 let map
+let geocoder
+
+const display = document.getElementById('display')
 
 function initMap(){
   geocoder = new google.maps.Geocoder()
@@ -29,8 +34,6 @@ function initMap(){
   });
 }
 
-let geocoder
-
 function codeAddress(){
   let inputAddress = document.getElementById('address').value;
 
@@ -41,6 +44,7 @@ function codeAddress(){
         map: map,
         position: results[0].geometry.location
       });
+      display.textContent = "検索結果:" + results[0].geometry.location
     } else {
       alert('該当する結果がありませんでした:' + status);
     }
@@ -48,4 +52,5 @@ function codeAddress(){
 }
 
 </script>
+
 <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD9tymoRG9KGBK6ylb1fwoYf-03-DpgwPM&callback=initMap" async defer></script>
