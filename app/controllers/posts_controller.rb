@@ -6,6 +6,9 @@ class PostsController < ApplicationController
   end
 
   def new
+    post = Post.new(post_params)
+    post.save!
+    redirect_to posts_url, notice: "地点を登録しました。"
   end
 
   def edit
@@ -17,6 +20,6 @@ class PostsController < ApplicationController
   private
 
   def post_params
-    params.require(:post).permit(:description, :lat, :lng)
+    params.require(:post).permit(:description, :lat, :lng, :name, :address)
   end
 end
