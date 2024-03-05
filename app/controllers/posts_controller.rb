@@ -6,9 +6,17 @@ class PostsController < ApplicationController
   end
 
   def new
+    @post = Post.new
+  end
+
+  def create
     post = Post.new(post_params)
-    post.save!
-    redirect_to posts_url, notice: "地点を登録しました。"
+    if post.save!
+      redirect_to posts_path, notice: "地点の登録をしました."
+    else
+      flash.now[:danger] = ("地点作成に失敗しました")
+      render :new
+    end
   end
 
   def edit
