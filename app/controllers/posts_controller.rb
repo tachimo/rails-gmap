@@ -1,5 +1,6 @@
 class PostsController < ApplicationController
   def index
+    @post = Post.all
   end
 
   def show
@@ -10,8 +11,8 @@ class PostsController < ApplicationController
   end
 
   def create
-    post = Post.new(post_params)
-    if post.save!
+    @post = Post.new(post_params)
+    if @post.save!
       redirect_to posts_path, notice: "地点の登録をしました."
     else
       flash.now[:danger] = ("地点作成に失敗しました")
