@@ -1,4 +1,4 @@
-<%= form_with model: @post, local: true do |f| %>
+<%= form_with model: @post, url:posts_path, local: true do |f| %>
   <div class="action">
     <%= f.label :description,"内容" %>
     <%= f.text_field :description %>

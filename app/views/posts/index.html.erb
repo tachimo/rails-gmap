@@ -16,9 +16,7 @@
 </style>
 
 <script>
-
-  function initMap() {
-
+    function initMap() {
       //初期表示位置
       let latlng = new google.maps.LatLng(38.60, 139.5);
       //デザイン
@@ -42,7 +40,7 @@
 //複数マーカー ここから
       <% @post.each do |post|%>
         ( function() { 
-          let markerLatLng = { lat: <%= post.lat %>, lng: <%= post.lng %> }; // 緯度経度のデータ作成
+          let markerLatLng = { lat: <%= @post.lat %>, lng: <%= @post.lng %> } // 緯度経度のデータ作成
           let marker = new google.maps.Marker({ 
             position: markerLatLng, 
             map: map 
