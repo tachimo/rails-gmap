@@ -53,3 +53,4 @@ production:
   database: rails_gmap_production
   username: rails_gmap
   password: <%= ENV["RAILS_GMAP_DATABASE_PASSWORD"] %>
+  url: <%= ENV["DATABASE_URL"] %>
