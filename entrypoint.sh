@@ -1,5 +1,3 @@
-entrypoint.sh
-
 #!/bin/sh
 set -e
 
