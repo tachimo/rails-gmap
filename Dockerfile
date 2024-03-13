@@ -1,5 +1,3 @@
-Docker file
-
 #applicationのディレクトリ名で置き換えてください
 ARG APP_NAME=rails-gmap
 #使いたいrubyのimage名に置き換えてください
